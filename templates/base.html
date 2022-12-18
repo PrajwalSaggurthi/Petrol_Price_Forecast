@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Petrol Fore cast</title>
+</head>
+<body>
+<div class="box-form">
+    <div class="left">
+        <div class="overlay">
+            <h1>Petrol Price Forecast</h1>
+		<p>Here you can predict the petrol price by just by simply giving the date. 
+            Simple, easy and quick</p>
+        </div>
+    </div>
+    <div class="right">
+        <h1>Enter Date</h1>
+        <div class="inputs">
+            <form action="http://localhost:2000/result" method="get">
+            <input type="date" name="data"/>
+            <input type="submit">
+        </form>
+        </div>
+        <h1>Prediction:</h1>
+        <label>{{result}}</label>
+    </div>
+
+</div>
+</body>
+</html>
