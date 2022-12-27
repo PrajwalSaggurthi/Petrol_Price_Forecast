@@ -18,9 +18,15 @@ def result():
     string=''
     for i in data:
         string+=i
-    model=pickle.load(open('/Users/prajwalsaggurthi/Desktop/Project/model3.pkl','rb'))
-    res=str(model.predict([[int(string)]]))
-    return render_template('base.html',result=res)
+    modelgnb=pickle.load(open('modelgnb.pkl','rb'))
+    modellogic = pickle.load(open('modellogic.pkl','rb'))
+    modellr=pickle.load(open('modellr.pkl','rb'))
+    modelrfc=pickle.load(open('modelrfc.pkl','rb'))
+    gnb=str(modelgnb.predict([[int(string)]]))
+    log=str(modellogic.predict([[int(string)]]))
+    lr=str(modellr.predict([[int(string)]]))
+    rfc=str(modelrfc.predict([[int(string)]]))
+    return render_template('result.html',gnb=gnb,log=log,lr=lr,rfc=rfc)
 
 if __name__ == '__main__':
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=False)

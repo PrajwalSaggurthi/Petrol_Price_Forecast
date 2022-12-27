@@ -17,13 +17,31 @@
         </div>
     </div>
     <div class="right">
-        <h1>Enter Date</h1>
+        <h1>Prediction:</h1>
+        <form action="/">
+        <table>
+            <tr>
+                <td>Random Forest</td>
+                <td>{{rfc}}</td>
+            </tr>
+            <tr>
+                <td>Logistic Regression</td>
+                <td>{{log}}</td>
+            </tr>
+            <tr>
+                <td>Naive Bayes</td>
+                <td>{{gnb}}</td>
+            </tr>
+            <tr>
+                <td>Linear Regression</td>
+                <td>{{lr}}</td>
+            </tr>
+
+        </table>
         <div class="inputs">
-            <form action="/result" method="get">
-            <input type="date" name="data"/>
-            <input type="submit">
-        </form>
-        </div>
+        <input type="submit" value="Back">
+    </div>
+    </form>
     </div>
 
 </div>
